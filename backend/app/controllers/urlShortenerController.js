@@ -27,7 +27,14 @@ function createUniqid(str) {
 // Create a new short url and save the record into database
 exports.create = (req, res) => {
   // step 1 - validate the request by checking whether all information is provided
-  if (!req.body.url && !req.body.description) {
+  if (!req.body.url.trim()) {
+    res.status(400).send({
+      message: "All information must be provided."
+    });
+    return;
+  }
+
+  if (!req.body.description.trim()) {
     res.status(400).send({
       message: "All information must be provided."
     });
