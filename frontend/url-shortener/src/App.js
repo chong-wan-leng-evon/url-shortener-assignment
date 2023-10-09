@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import CreateShortUrl from "./components/create-short-url";
-
+import AllUrl from "./components/all-urls";
 
 export default class App extends Component {
   constructor(props) {
@@ -38,7 +38,9 @@ export default class App extends Component {
         {this.state.showModal && <CreateShortUrl changeState={this.changeState} />}
 
         <div style={{ textAlign: 'center' }}> <h1> Url Shortener </h1> </div>
-        
+
+        {this.state.showUrlModal && <AllUrl changeState={this.changeState} />}
+
         <Footer />
       </div>
     );
