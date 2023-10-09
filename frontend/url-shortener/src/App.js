@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 
 export default class App extends Component {
@@ -32,6 +33,7 @@ export default class App extends Component {
       /* Split the page into 3 section (header, container, footer) */
       <div className="myStyle">
         <Header changeState={this.changeState} />
+        <Footer />
       </div>
     );
   }
