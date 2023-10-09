@@ -21,6 +21,7 @@ new shortened URLs.
   - Choose a local path to save the project into
  
 # Prerequisites
+Database
 - MySQL Workbench: Download ([https://www.postgresql.org/download/](https://dev.mysql.com/downloads/workbench/)
     - Follow the installation flow
     - Create a new connection with the following configurations
@@ -46,3 +47,29 @@ new shortened URLs.
   - cd backend
   - npm install
   - node server.js
+
+# Function Flow
+
+### Homepage
+![image](https://github.com/chong-wan-leng-evon/url-shortener-assignment/assets/108246630/0725b59b-797b-4032-8ab5-046cc74bc88a)
+
+### Create short url function
+- Press the "Create Short Url" button
+  
+Provide the following information
+- Original url
+- A short description of the website
+![image](https://github.com/chong-wan-leng-evon/url-shortener-assignment/assets/108246630/42be60f3-d4b6-49b9-8781-92f3b81538b2)
+
+### Create short url successfully
+Clicking on the "copy" button, the created short url will be copied to clipboard.
+![image](https://github.com/chong-wan-leng-evon/url-shortener-assignment/assets/108246630/634750bd-69e8-4089-aaf1-7be9247a19bc)
+
+### View all created short urls
+- Press the "View Urls" button
+
+All the created shor urls will be showed
+  - Clicking on the "View Website" button will open the website in a new tab
+  - Clicking on the "Delete" button will udpate the url record in database with a status = 0, to be inactive so that it will be be showing up
+  - Clicking on the "copy" button, the short url will be copied to clipboard.
+![image](https://github.com/chong-wan-leng-evon/url-shortener-assignment/assets/108246630/50f9a7b5-3364-4626-ab77-ba8fa6cc4357)
